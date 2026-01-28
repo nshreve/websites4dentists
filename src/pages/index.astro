@@ -1,6 +1,9 @@
 ---
+import Button from "../components/Button.astro";
 import Eyebrow from "../components/Eyebrow.astro";
+import Header from "../components/Header.astro";
 import HeadingStack from "../components/HeadingStack.astro";
+import StarWrap from "../components/StarWrap.astro";
 import "../styles.css";
 ---
 
@@ -15,13 +18,22 @@ import "../styles.css";
   </head>
   <body>
     <section class="hero">
+      <Header />
       <div class="container">
         <Eyebrow text="Over 500 pages launched" icon="/img/eyebrow.webp" />
         <HeadingStack
           heading="We Bring Dentists More Patients Through Profitable Websites"
           paragraph="We create a sure-fire way for potential patients to find your Dental Office using modern websites, allowing you to <strong>grow your practice completely hands-off.</strong>"
         />
-		
+        <StarWrap />
+        <div
+          style="display: flex; flex-direction: column; gap: 1rem; align-items: center;"
+        >
+          <Button text="Let's Talk →" href="#contact" />
+          <p style="font-size: .875rem; font-weight: 500; opacity: 0.8;">
+            Limited Spots Available
+          </p>
+        </div>
       </div>
     </section>
   </body>
@@ -44,10 +56,11 @@ import "../styles.css";
     border-radius: 2rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+	position: relative;
     color: white;
     & .container {
       display: flex;
-	  gap: 1.5rem;
+      gap: 1.5rem;
       align-items: center;
       flex-direction: column;
     }

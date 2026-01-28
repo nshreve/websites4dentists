@@ -1,0 +1,33 @@
+---
+import Logo from "./Logo.astro";
+import Button from "./Button.astro";
+---
+
+<header class="header">
+  <nav class="nav">
+    <a href="/" class="nav-logo-link">
+      <Logo />
+    </a>
+    <Button text="Let's talk →" href="#contact" />
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .nav-logo-link {
+    display: block;
+    width: 9.5rem;
+    color: white;
+  }
+</style>
