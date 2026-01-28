@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/InterDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/InterDisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/InterDisplay-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/fonts/InstrumentSerif-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+     font-variant-ligatures: common-ligatures;
+     background-color: #FDFDFD;
+}
+
+strong {
+    font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5.75rem;
+    line-height: 1.07;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    font-family: 'Instrument Serif', serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

@@ -1,17 +1,55 @@
 ---
-
+import Eyebrow from "../components/Eyebrow.astro";
+import HeadingStack from "../components/HeadingStack.astro";
+import "../styles.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Test</title>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="container">
+        <Eyebrow text="Over 500 pages launched" icon="/img/eyebrow.webp" />
+        <HeadingStack
+          heading="We Bring Dentists More Patients Through Profitable Websites"
+          paragraph="We create a sure-fire way for potential patients to find your Dental Office using modern websites, allowing you to <strong>grow your practice completely hands-off.</strong>"
+        />
+		
+      </div>
+    </section>
+  </body>
 </html>
+
+<style>
+  .hero {
+    background:
+      linear-gradient(0deg, #0041ff 0%, #0041ff 100%),
+      url(/img/hero.webp) lightgray 50% / cover no-repeat;
+    background:
+      linear-gradient(
+        0deg,
+        color(display-p3 0 0.25 1) 0%,
+        color(display-p3 0 0.25 1) 100%
+      ),
+      url(/img/hero.webp) lightgray 50% / cover no-repeat;
+    background-blend-mode: hard-light, normal;
+    margin: 1rem;
+    border-radius: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: white;
+    & .container {
+      display: flex;
+	  gap: 1.5rem;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,42 @@
+---
+const { text, icon } = Astro.props;
+---
+
+<div class="eyebrow">
+  {icon && <img src={icon} alt="" />}
+  <span>{text}</span>
+</div>
+
+<style>
+  .eyebrow {
+    display: flex;
+    padding: 0.375rem 1rem 0.375rem 0.375rem;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 100vw;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid color(display-p3 1 1 1 / 0.2);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.24) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      color(display-p3 1 1 1 / 0.24) 0%,
+      color(display-p3 1 1 1 / 0.4) 100%
+    );
+    backdrop-filter: blur(6.849999904632568px);
+    color: #fff;
+    color: color(display-p3 1 1 1);
+    font-family: "Inter Display";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    & img {
+        width: auto;
+        height: 2rem;
+    }
+  }
+</style>
