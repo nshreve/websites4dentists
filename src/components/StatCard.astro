@@ -1,0 +1,27 @@
+---
+const { statLarge, statSmall } = Astro.props;
+---
+
+<div class="stat-card">
+  <slot />
+  <div class="stats">
+    <div class="stat-large">{statLarge}</div>
+    <div class="stat-small">{statSmall}</div>
+  </div>
+</div>
+
+<style>
+  .stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .stat-large {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+</style>

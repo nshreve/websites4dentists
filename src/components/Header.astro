@@ -1,6 +1,9 @@
 ---
 import Logo from "./Logo.astro";
 import Button from "./Button.astro";
+
+const { buttonText = "Let's talk →" } = Astro.props;
+
 ---
 
 <header class="header">
@@ -8,7 +11,7 @@ import Button from "./Button.astro";
     <a href="/" class="nav-logo-link">
       <Logo />
     </a>
-    <Button text="Let's talk →" href="#contact" />
+    <Button text={buttonText} href="#contact" />
   </nav>
 </header>
 

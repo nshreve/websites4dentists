@@ -32,11 +32,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+         	scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
      font-variant-ligatures: common-ligatures;
      background-color: #FDFDFD;
+
 }
 
 strong {
@@ -49,7 +54,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1 {
-    font-size: 5.75rem;
+    font-size: clamp(3.125rem, 1.4068rem + 7.0492vw, 5.8125rem);
     line-height: 1.07;
     letter-spacing: -0.03em;
     font-weight: 400;
@@ -60,4 +65,8 @@ h1 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+ul {
+    padding-inline-start: 0rem;
 }

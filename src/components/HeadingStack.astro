@@ -4,7 +4,7 @@ const { heading, paragraph } = Astro.props;
 
 <div class="heading-stack">
   <h1>{heading}</h1>
-  <p set:html={paragraph} />
+  {paragraph && paragraph.trim() ? <p set:html={paragraph} /> : null}
 </div>
 
 <style>
